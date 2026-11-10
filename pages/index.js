@@ -38,9 +38,9 @@ export default function CMMSApp() {
       <h1 style={{ color: '#38bdf8', fontSize: '24px', marginBottom: '20px' }}>Audita 9050 CMMS</h1>
       
       <div style={{ display: 'flex', gap: '10px', marginBottom: '20px' }}>
-        <button onClick={() => setAba('os')} style={{ padding: '10px', background: aba === 'os' ? '#2563eb' : '#334155', color: '#fff', border: 'none', borderRadius: '5px' }}>Ordens de Serviço</button>
-        <button onClick={() => setAba('equip')} style={{ padding: '10px', background: aba === 'equip' ? '#2563eb' : '#334155', color: '#fff', border: 'none', borderRadius: '5px' }}>Equipamentos</button>
-        <button onClick={() => setAba('estoque')} style={{ padding: '10px', background: aba === 'estoque' ? '#2563eb' : '#334155', color: '#fff', border: 'none', borderRadius: '5px' }}>Estoque</button>
+        <button onClick={() => setAba('os')} style={{ padding: '10px', background: aba === 'os' ? '#2563eb' : '#334155', color: '#fff', border: 'none', borderRadius: '5px', cursor: 'pointer' }}>Ordens de Serviço</button>
+        <button onClick={() => setAba('equip')} style={{ padding: '10px', background: aba === 'equip' ? '#2563eb' : '#334155', color: '#fff', border: 'none', borderRadius: '5px', cursor: 'pointer' }}>Equipamentos</button>
+        <button onClick={() => setAba('estoque')} style={{ padding: '10px', background: aba === 'estoque' ? '#2563eb' : '#334155', color: '#fff', border: 'none', borderRadius: '5px', cursor: 'pointer' }}>Estoque</button>
       </div>
 
       {aba === 'os' && (
@@ -48,7 +48,7 @@ export default function CMMSApp() {
           <h2>Ordens de Serviço</h2>
           <form onSubmit={criarOs} style={{ marginTop: '10px', display: 'flex', gap: '10px' }}>
             <input type="text" placeholder="Descrição do serviço..." value={descOs} onChange={(e) => setDescOs(e.target.value)} style={{ padding: '8px', flex: '1', borderRadius: '4px', border: '1px solid #475569', background: '#1e293b', color: '#fff' }} />
-            <button type="submit" style={{ padding: '8px 16px', background: '#2563eb', color: '#fff', border: 'none', borderRadius: '4px' }}>Abrir OS</button>
+            <button type="submit" style={{ padding: '8px 16px', background: '#2563eb', color: '#fff', border: 'none', borderRadius: '4px', cursor: 'pointer' }}>Abrir OS</button>
           </form>
           <ul style={{ marginTop: '20px', listStyle: 'none', padding: 0 }}>
             {ordens.map(o => (
@@ -63,7 +63,7 @@ export default function CMMSApp() {
           <h2>Equipamentos</h2>
           <form onSubmit={adicionarEquipamento} style={{ marginTop: '10px', display: 'flex', gap: '10px' }}>
             <input type="text" placeholder="Nome do equipamento..." value={nomeEq} onChange={(e) => setNomeEq(e.target.value)} style={{ padding: '8px', flex: '1', borderRadius: '4px', border: '1px solid #475569', background: '#1e293b', color: '#fff' }} />
-            <button type="submit" style={{ padding: '8px 16px', background: '#2563eb', color: '#fff', border: 'none', borderRadius: '4px' }}>Adicionar</button>
+            <button type="submit" style={{ padding: '8px 16px', background: '#2563eb', color: '#fff', border: 'none', borderRadius: '4px', cursor: 'pointer' }}>Adicionar</button>
           </form>
           <ul style={{ marginTop: '20px', listStyle: 'none', padding: 0 }}>
             {equipamentos.map(eq => (
@@ -79,7 +79,7 @@ export default function CMMSApp() {
           <form onSubmit={adicionarPeca} style={{ marginTop: '10px', display: 'flex', gap: '10px' }}>
             <input type="text" placeholder="Nome da peça..." value={nomePeca} onChange={(e) => setNomePeca(e.target.value)} style={{ padding: '8px', flex: '1', borderRadius: '4px', border: '1px solid #475569', background: '#1e293b', color: '#fff' }} />
             <input type="number" placeholder="Qtd" value={qtdPeca} onChange={(e) => setQtdPeca(e.target.value)} style={{ padding: '8px', width: '80px', borderRadius: '4px', border: '1px solid #475569', background: '#1e293b', color: '#fff' }} />
-            <button type="submit" style={{ padding: '8px 16px', background: '#2563eb', color: '#fff', border: 'none', borderRadius: '4px' }}>Cadastrar</button>
+            <button type="submit" style={{ padding: '8px 16px', background: '#2563eb', color: '#fff', border: 'none', borderRadius: '4px', cursor: 'pointer' }}>Cadastrar</button>
           </form>
           <ul style={{ marginTop: '20px', listStyle: 'none', padding: 0 }}>
             {pecas.map(p => (
@@ -95,22 +95,4 @@ export default function CMMSApp() {
   );
 }
 
-
-
  
- 
-
-
-         
-     
-     
-
- 
-            
-           
-              
-          
-            
-       
-                    
-         
